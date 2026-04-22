@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #f5f7f9;
+  --color-background: #f1f5f9;
   --color-error-dim: #9f0519;
-  --color-surface: #f5f7f9;
+  --color-surface: #f1f5f9;
   --color-on-secondary: #c8ffe0;
   --color-secondary-container: #69f6b8;
   --color-tertiary-container: #ff955a;
@@ -59,8 +59,8 @@
   --radius-full: 9999px;
 
   --font-headline: var(--font-manrope);
-  --font-body: var(--font-inter);
-  --font-label: var(--font-inter);
+  --font-body: var(--font-manrope);
+  --font-label: var(--font-manrope);
 }
 
 @layer base {
@@ -82,5 +82,11 @@
   .glass-panel {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
+  }
+}
+
+@media print {
+  * {
+    font-family: Calibri, 'Segoe UI', Candara, Segoe, Optima, Arial, sans-serif !important;
   }
 }

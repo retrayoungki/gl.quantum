@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
+import AuthGuard from "@/components/AuthGuard";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,6 +22,9 @@ export const metadata: Metadata = {
   description: "Enterprise Accounting Dashboard",
 };
 
+
+import { CompanyProvider } from "@/context/CompanyContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -36,7 +42,13 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-surface text-on-surface">
-        {children}
+        <AuthProvider>
+          <AuthGuard>
+            <CompanyProvider>
+              {children}
+            </CompanyProvider>
+          </AuthGuard>
+        </AuthProvider>
       </body>
     </html>
   );
