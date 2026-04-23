@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f1f5f9;
+  --color-error-dim: #9f0519;
+  --color-surface: #f1f5f9;
+  --color-on-secondary: #c8ffe0;
+  --color-secondary-container: #69f6b8;
+  --color-tertiary-container: #ff955a;
+  --color-secondary-fixed: #69f6b8;
+  --color-primary: #0050d4;
+  --color-tertiary: #994100;
+  --color-surface-container-highest: #d9dde0;
+  --color-on-primary-container: #001e5a;
+  --color-on-tertiary: #fff0e9;
+  --color-on-surface-variant: #595c5e;
+  --color-on-tertiary-container: #552100;
+  --color-on-surface: #2c2f31;
+  --color-primary-fixed: #7b9cff;
+  --color-surface-dim: #d0d5d8;
+  --color-surface-bright: #f5f7f9;
+  --color-on-primary-fixed-variant: #00266e;
+  --color-outline-variant: #abadaf;
+  --color-on-primary-fixed: #000000;
+  --color-surface-container: #e5e9eb;
+  --color-on-error-container: #570008;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-tertiary-fixed: #2e0e00;
+  --color-inverse-primary: #618bff;
+  --color-inverse-surface: #0b0f10;
+  --color-surface-container-low: #eef1f3;
+  --color-inverse-on-surface: #9a9d9f;
+  --color-on-secondary-fixed-variant: #006544;
+  --color-on-primary: #f1f2ff;
+  --color-on-secondary-container: #005a3c;
+  --color-secondary-dim: #005c3d;
+  --color-surface-container-high: #dfe3e6;
+  --color-surface-variant: #d9dde0;
+  --color-on-tertiary-fixed-variant: #632800;
+  --color-tertiary-fixed: #ff955a;
+  --color-primary-container: #7b9cff;
+  --color-surface-tint: #0050d4;
+  --color-primary-fixed-dim: #658eff;
+  --color-on-background: #2c2f31;
+  --color-error: #b31b25;
+  --color-secondary-fixed-dim: #58e7ab;
+  --color-tertiary-dim: #863800;
+  --color-primary-dim: #0046bb;
+  --color-outline: #747779;
+  --color-on-error: #ffefee;
+  --color-error-container: #fb5151;
+  --color-on-secondary-fixed: #00452d;
+  --color-tertiary-fixed-dim: #ff7f2f;
+  --color-secondary: #006947;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  --font-headline: var(--font-manrope);
+  --font-body: var(--font-manrope);
+  --font-label: var(--font-manrope);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, .brand-font {
+    font-family: var(--font-headline);
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .signature-gradient {
+    background: linear-gradient(135deg, #0050d4 0%, #7b9cff 100%);
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+  }
+}
+
+@media print {
+  * {
+    font-family: Calibri, 'Segoe UI', Candara, Segoe, Optima, Arial, sans-serif !important;
+  }
+}
