@@ -48,7 +48,7 @@ export default function Sidebar() {
           <span className="material-symbols-outlined">rocket_launch</span>
         </div>
         <div>
-          <h1 className="text-lg font-extrabold text-blue-900 dark:text-white leading-tight">Q-GL Portal</h1>
+          <h1 className="text-lg font-extrabold text-blue-900 dark:text-white leading-tight">Quantive Ledger</h1>
           <p className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Accounting v4</p>
         </div>
       </div>

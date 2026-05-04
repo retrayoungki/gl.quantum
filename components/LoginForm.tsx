@@ -32,9 +32,9 @@ export default function LoginForm() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center mb-6">
             <img 
-              src="/logo.png" 
-              alt="Q-GL Accounting Logo" 
-              className="h-16 w-auto"
+              src="/logo-quantive.png" 
+              alt="Quantive Ledger Logo" 
+              className="h-[77px] w-auto"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = 'none';
                 const fallback = document.getElementById('login-logo-fallback');
@@ -48,7 +48,7 @@ export default function LoginForm() {
                 </span>
               </div>
               <h1 className="text-2xl font-extrabold text-slate-900 font-manrope tracking-tight mt-2">
-                Q-GL Accounting
+                Quantive Ledger
               </h1>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function LoginForm() {
         {/* Footer */}
         <div className="mt-10 text-center border-t border-slate-100 pt-8">
           <p className="text-xs text-slate-400 font-medium tracking-wide">
-            &copy; 2024 Q-GL ACCOUNTING PORTAL • SECURE ACCESS
+            &copy; 2024 QUANTIVE LEDGER PORTAL • SECURE ACCESS
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { UserRole, ROLES } from "@/lib/roles";
 import { Permission } from "@/lib/permissions";
 import { useAuth } from "@/context/AuthContext";
@@ -101,7 +101,7 @@ export default function RolePermissionsPage() {
                   return acc;
                 }, {} as Record<string, typeof PERMISSIONS_LIST>)
               ).map(([moduleName, permissions]) => (
-                <React.Fragment key={moduleName}>
+                <Fragment key={moduleName}>
                   <tr className="bg-slate-50/50">
                     <td colSpan={ROLES.length + 1} className="p-3 text-xs font-black text-slate-400 uppercase tracking-widest">
                       {moduleName} Module
@@ -134,7 +134,7 @@ export default function RolePermissionsPage() {
                       })}
                     </tr>
                   ))}
-                </React.Fragment>
+                </Fragment>
               ))}
             </tbody>
           </table>

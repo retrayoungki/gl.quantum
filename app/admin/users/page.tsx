@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { collection, getDocs, doc, setDoc, deleteDoc } from "firebase/auth"; // We will use firestore, auth is client side
+import { collection, getDocs, doc, setDoc, deleteDoc } from "firebase/firestore"; // Use firestore for database operations
 import { db } from "@/lib/firebase";
 import { UserData, ROLES, UserRole, Company } from "@/lib/roles";
 import { useAuth } from "@/context/AuthContext";

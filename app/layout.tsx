@@ -18,7 +18,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Q-GL Accounting - Dashboard",
+  title: "Quantive Ledger - Dashboard",
   description: "Enterprise Accounting Dashboard",
 };
 

@@ -413,7 +413,7 @@ export default function CashBankVoucher() {
                     <label className="block text-xs font-bold text-slate-500 mb-1 uppercase tracking-wider">Tanggal Mulai</label>
                     <DatePicker 
                       selected={startDate}
-                      onChange={(date) => setStartDate(date || new Date())}
+                      onChange={(date: Date | null) => setStartDate(date || new Date())}
                       dateFormat="dd/MM/yyyy"
                       className="px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-semibold outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all w-32"
                     />
@@ -423,7 +423,7 @@ export default function CashBankVoucher() {
                     <label className="block text-xs font-bold text-slate-500 mb-1 uppercase tracking-wider">Tanggal Selesai</label>
                     <DatePicker 
                       selected={endDate}
-                      onChange={(date) => setEndDate(date || new Date())}
+                      onChange={(date: Date | null) => setEndDate(date || new Date())}
                       dateFormat="dd/MM/yyyy"
                       className="px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-semibold outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all w-32"
                     />
@@ -577,7 +577,7 @@ export default function CashBankVoucher() {
                             <label className="block text-sm font-bold text-slate-700 mb-1.5">Tanggal Transaksi</label>
                             <DatePicker 
                             selected={newVoucher.date ? parseISO(newVoucher.date) : new Date()}
-                            onChange={(date) => date && setNewVoucher({...newVoucher, date: format(date, 'yyyy-MM-dd')})}
+                            onChange={(date: Date | null) => date && setNewVoucher({...newVoucher, date: format(date, 'yyyy-MM-dd')})}
                             dateFormat="dd/MM/yyyy"
                             className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                             />

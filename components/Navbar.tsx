@@ -53,9 +53,9 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-4 group">
             <div className="relative flex items-center gap-3">
               <img 
-                src="/logo.png" 
-                alt="Q-GL Accounting Logo" 
-                className="h-12 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
+                src="/logo-quantive.png" 
+                alt="Quantive Ledger Logo" 
+                className="h-[58px] w-auto object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
                   const fallback = document.getElementById('logo-fallback');
@@ -67,7 +67,7 @@ export default function Navbar() {
                   <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>account_balance</span>
                 </div>
                 <div className="text-lg font-extrabold text-slate-900 leading-tight font-manrope hidden sm:block">
-                  Q-GL
+                  Quantive Ledger
                 </div>
               </div>
             </div>
